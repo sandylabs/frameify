@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameify - Modern Photobooth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <div class="w-full">
+        <!-- Modern Navbar -->
+        <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-30 border-b border-gray-100 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold gradient-text">Frameify</a>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-6">
+                            <a href="#features" class="text-gray-500 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                            <a href="#how-it-works" class="text-gray-500 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                            <a href="app.html" class="text-gray-500 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Try Now</a>
+                        </div>
+                    </div>
+                    <a href="app.html" class="bg-gradient-to-r from-pink-600 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+                        Create Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="bg-gradient-to-b from-white to-gray-50">
+            <div class="max-w-7xl mx-auto py-20 px-4 sm:py-28 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight">
+                    <span class="block">Create Stunning</span>
+                    <span class="gradient-text">Photo Memories</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-500">
+                    Professional-quality photo strips with customizable layouts, filters and stickers - no app required.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="app.html" class="bg-gradient-to-r from-pink-600 to-pink-500 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg">
+                        Start Creating
+                    </a>
+                    <a href="#features" class="bg-white text-gray-700 font-semibold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 text-lg">
+                        Learn More
+                    </a>
+                </div>
+                <div class="mt-16 max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Frameify example" class="w-full h-auto">
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Designed for Creativity</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                        All the tools you need to create perfect photo strips
+                    </p>
+                </div>
+                <div class="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                        <div class="flex-shrink-0 flex justify-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-50">
+                                <svg class="h-8 w-8 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-900">Multiple Layouts</h3>
+                            <p class="mt-4 text-gray-500">
+                                Choose from various photo strip layouts including classic strips, grids, and more to suit any occasion.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                        <div class="flex-shrink-0 flex justify-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-50">
+                                <svg class="h-8 w-8 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-900">Live Filters</h3>
+                            <p class="mt-4 text-gray-500">
+                                Apply beautiful filters in real-time before capturing your photos. Choose from B&W, Vintage, and more.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                        <div class="flex-shrink-0 flex justify-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-50">
+                                <svg class="h-8 w-8 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-900">Fun Stickers</h3>
+                            <p class="mt-4 text-gray-500">
+                                Decorate your photos with a variety of stickers and overlays to add personality to your creations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-gray-900">How It Works</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                        Create your perfect photo strip in just a few simple steps
+                    </p>
+                </div>
+                <div class="mt-16 space-y-16">
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <div class="bg-gradient-to-br from-pink-50 to-white p-1 rounded-2xl shadow-lg inline-block">
+                                <div class="bg-white p-4 rounded-xl">
+                                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="Step 1" class="rounded-lg w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">Step 1</span>
+                            <h3 class="text-2xl font-bold text-gray-900">Choose Your Layout</h3>
+                            <p class="mt-4 text-gray-500">
+                                Select from our collection of beautifully designed photo strip layouts. Whether you want a classic strip or a modern grid, we have options for every style.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                        <div class="md:w-1/2">
+                            <div class="bg-gradient-to-br from-pink-50 to-white p-1 rounded-2xl shadow-lg inline-block">
+                                <div class="bg-white p-4 rounded-xl">
+                                    <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43" alt="Step 2" class="rounded-lg w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">Step 2</span>
+                            <h3 class="text-2xl font-bold text-gray-900">Take Your Photos</h3>
+                            <p class="mt-4 text-gray-500">
+                                Use your device's camera to capture photos directly in the app. Apply filters in real-time and see exactly how your photos will look.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <div class="bg-gradient-to-br from-pink-50 to-white p-1 rounded-2xl shadow-lg inline-block">
+                                <div class="bg-white p-4 rounded-xl">
+                                    <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda" alt="Step 3" class="rounded-lg w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">Step 3</span>
+                            <h3 class="text-2xl font-bold text-gray-900">Customize & Download</h3>
+                            <p class="mt-4 text-gray-500">
+                                Add stickers, adjust colors, and personalize your photo strip. When you're happy with the result, download it in high quality to share with friends.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-pink-600 to-pink-500">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-white">
+                    Ready to Create Your Photo Strip?
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-pink-100">
+                    Join thousands of users creating beautiful photo memories with Frameify.
+                </p>
+                <div class="mt-8">
+                    <a href="app.html" class="inline-block bg-white text-pink-600 font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105 text-lg">
+                        Start Now - It's Free
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold gradient-text">Frameify</a>
+                    </div>
+                    <div class="mt-8 md:mt-0 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-pink-600">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+                    <p class="text-base text-gray-400">
+                        &copy; 2025 Frameify. All rights reserved.
+                    </p>
+                    <div class="mt-8 md:mt-0 flex space-x-6">
+                        <a href="#" class="text-base text-gray-400 hover:text-pink-600">Privacy Policy</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-pink-600">Terms of Service</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-pink-600">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
