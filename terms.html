@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service - Frameify</title>
+    <link rel="icon" href="images/icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles matching the index.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Custom styles for a luxurious but proportional page */
+        .card-elegant {
+            background: linear-gradient(145deg, #ffffff, #fff0f5);
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .card-elegant:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(236, 72, 153, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+        .icon-box {
+            background: linear-gradient(45deg, #fce7f3, #ffe4e6);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+        }
+        .icon-box-large {
+            width: 96px;
+            height: 96px;
+        }
+        .icon-box svg {
+            width: 36px;
+            height: 36px;
+            color: #db2777;
+        }
+        .section-separator {
+            border-top: 1px solid #f9a8d4;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            animation-name: fadeInUp;
+            animation-duration: 0.8s;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+        .animate-delay-6 { animation-delay: 0.6s; }
+        .animate-delay-7 { animation-delay: 0.7s; }
+        .animate-delay-8 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="w-full">
+        <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-30 border-b border-gray-100 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold gradient-text">Frameify</a>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-6">
+                            <a href="index.html#features" class="text-gray-500 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                            <a href="index.html#how-it-works" class="text-gray-500 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                            <a href="app.html" class="text-gray-500 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Try Now</a>
+                        </div>
+                    </div>
+                    <a href="app.html" class="bg-gradient-to-r from-pink-600 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+                        Create Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <header class="bg-white py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center justify-center icon-box-large bg-gradient-to-br from-pink-100 to-pink-50 mb-6 rounded-full fade-in">
+                    <svg class="h-12 w-12 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight fade-in animate-delay-1">
+                    Terms of Service
+                </h1>
+                <p class="mt-4 text-lg text-gray-500 fade-in animate-delay-2">
+                    These terms govern your use of the Frameify service.
+                </p>
+                <p class="mt-2 text-sm text-gray-400 fade-in animate-delay-3">
+                    Last updated: August 2025
+                </p>
+            </div>
+        </header>
+
+        <main class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                
+                <article class="card-elegant p-8 md:p-12 fade-in animate-delay-4">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 icon-box">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v3h8z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mt-0">1. Acceptance of Terms</h2>
+                            <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                                By accessing or using the Frameify service, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use the Service.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-elegant p-8 md:p-12 fade-in animate-delay-5">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 icon-box">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mt-0">2. Your Content and Responsibilities</h2>
+                            <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2 mt-2 ml-16">
+                                <li>
+                                    <strong>Content Ownership:</strong> You retain all rights to any images or content you upload to the Service. Frameify does not claim any ownership rights over your creations.
+                                </li>
+                                <li>
+                                    <strong>Content Responsibility:</strong> You are solely responsible for the content you use and create. You warrant that you have the necessary rights to use this content.
+                                </li>
+                                <li>
+                                    <strong>Prohibited Conduct:</strong> You agree not to use the Service for any illegal, harmful, or inappropriate activities, including the creation of content that is abusive, obscene, or violates the rights of others.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-elegant p-8 md:p-12 fade-in animate-delay-6">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 icon-box">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mt-0">3. Intellectual Property</h2>
+                            <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                                The Service itself, including all design elements, text, graphics, and software, is the intellectual property of Frameify. These terms do not grant you any rights to use Frameify's trademarks, logos, or any other brand features.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-elegant p-8 md:p-12 fade-in animate-delay-7">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 icon-box">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mt-0">4. Disclaimer of Warranties</h2>
+                            <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                                The Service is provided "as is" without any warranties, express or implied. Frameify does not guarantee that the Service will be uninterrupted, error-free, or secure.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-elegant p-8 md:p-12 fade-in animate-delay-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 icon-box">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mt-0">5. Limitation of Liability</h2>
+                            <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                                To the fullest extent permitted by law, Frameify shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use of the Service.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-elegant p-8 md:p-12 fade-in animate-delay-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 icon-box">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v3h8z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mt-0">6. General Provisions</h2>
+                            <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2 mt-2 ml-16">
+                                <li>
+                                    <strong>Governing Law:</strong> These terms are governed by the laws of Indonesia.
+                                </li>
+                                <li>
+                                    <strong>Changes to Terms:</strong> We may modify these terms at any time. We will post the changes on this page. Your continued use of the Service constitutes your acceptance of the new terms.
+                                </li>
+                                <li>
+                                    <strong>Contact Us:</strong> If you have any questions about these terms, please contact us at <a href="muhammadsandi1919@gmail.com" class="text-pink-600 hover:text-pink-700 underline transition-colors">muhammadsandi1919@gmail.com</a>.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer class="bg-white border-t border-gray-100 mt-20">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold gradient-text">Frameify</a>
+                    </div>
+                    <div class="mt-8 md:mt-0 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-pink-600">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+                    <p class="text-base text-gray-400">
+                        &copy; 2025 Frameify. All rights reserved.
+                    </p>
+                    <div class="mt-8 md:mt-0 flex space-x-6">
+                        <a href="privacy.html" class="text-base text-gray-400 hover:text-pink-600">Privacy Policy</a>
+                        <a href="terms.html" class="text-base text-gray-400 hover:text-pink-600">Terms of Service</a>
+                        <a href="#" class="text-base text-gray-400 hover:text-pink-600">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
