@@ -46,7 +46,7 @@ const CONFIG = {
         'cute': {
             name: 'Cute',
             icon: '🌸',
-            overlay: 'https://i.imgur.com/JQ6Y3zD.png'
+            overlay: 'https://i.imgur.com/fVr2kAl.png'
         },
         'girlypop': {
             name: 'Girlypop',
@@ -264,7 +264,6 @@ const initializeUI = () => {
     toggleMirrorBtn.nextElementSibling.addEventListener('click', () => {
         state.mirrorMode = false;
         video.classList.remove('mirror');
-        toggleMirrorBtn.textContent = 'Off';
         toggleMirrorBtn.classList.remove('bg-pink-500', 'text-white');
         toggleMirrorBtn.nextElementSibling.classList.add('bg-pink-500', 'text-white');
     });
@@ -417,12 +416,14 @@ const drawFinalResult = async () => {
     const canvas = previewCanvas;
     const ctx = canvas.getContext('2d');
 
-    const promises = state.photos.map(src => new Promise(res => {
-        const img = new Image();
-        img.onload = () => res(img);
-        img.src = src;
-    }));
-    const loadedImages = await Promise.all(promises);
+    // Load semua foto
+    const loadedImages = await Promise.all(
+        state.photos.map(src => new Promise(res => {
+            const img = new Image();
+            img.onload = () => res(img);
+            img.src = src;
+        }))
+    );
 
     const baseWidth = 600;
     const footerHeight = 60;
@@ -431,7 +432,7 @@ const drawFinalResult = async () => {
     const photoAreaWidth = baseWidth - (outerPadding * 2);
     const photoAspectRatio = 0.6667;
 
-    let totalPhotoHeight = 0;
+    let totalPhotoHeight;
     if (state.selectedLayoutKey.includes('grid')) {
         const cols = 2;
         const rows = Math.ceil(layoutConfig.count / cols);
@@ -447,9 +448,11 @@ const drawFinalResult = async () => {
     canvas.width = baseWidth;
     canvas.height = canvasHeight;
 
+    // Warna frame
     ctx.fillStyle = state.frameColor;
-    ctx.fillRect(0, 0, canvas.width, canvasHeight);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    // Gambar foto
     if (state.selectedLayoutKey.includes('grid')) {
         const cols = 2;
         const photoWidth = (photoAreaWidth - innerPadding * (cols - 1)) / cols;
@@ -469,21 +472,26 @@ const drawFinalResult = async () => {
         });
     }
 
-    // Draw active sticker if exists
-    if (state.activeSticker) {
-        const stickerImg = await new Promise(resolve => {
-            const img = new Image();
-            img.onload = () => resolve(img);
-            img.src = state.activeSticker;
-        });
+    // Gambar stiker jika ada
+    if (state.activeSticker && typeof state.activeSticker === 'string') {
+        try {
+            const stickerImg = await new Promise((resolve, reject) => {
+                const img = new Image();
+                img.crossOrigin = "anonymous";
+                img.onload = () => resolve(img);
+                img.onerror = reject;
+                img.src = state.activeSticker;
+            });
 
-        // Draw sticker as overlay covering the whole canvas
-        ctx.globalAlpha = 0.8; // Adjust opacity as needed
-        ctx.drawImage(stickerImg, 0, 0, canvas.width, canvas.height);
-        ctx.globalAlpha = 1.0;
+            ctx.globalAlpha = 0.8; // transparansi stiker
+            ctx.drawImage(stickerImg, 0, 0, canvas.width, canvas.height);
+            ctx.globalAlpha = 1.0;
+        } catch (err) {
+            console.error("Gagal load stiker:", err);
+        }
     }
 
-    // Add footer text
+    // Footer text
     const now = new Date();
     const date = now.toLocaleDateString('en-GB');
     const time = now.toLocaleTimeString('en-US', {
@@ -502,13 +510,14 @@ const drawFinalResult = async () => {
     ctx.textAlign = 'right';
     ctx.fillText(`© ${now.getFullYear()}`, canvas.width - (outerPadding / 2), footerTextY);
 
-    // Update download link
+    // Siapkan file download
     canvas.toBlob((blob) => {
         const url = URL.createObjectURL(blob);
         downloadBtn.href = url;
         downloadBtn.download = `frameify-${Date.now()}.png`;
     }, 'image/png', 1.0);
 };
+
 
 // Event Listeners
 getStartedBtn.addEventListener('click', () => showScreen('layout'));
