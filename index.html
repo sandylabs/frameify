@@ -13,6 +13,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #fafafa;
+            color: #333;
         }
         .gradient-text {
             background: linear-gradient(90deg, #ec4899 0%, #f472b6 100%);
@@ -21,18 +22,39 @@
             color: transparent;
         }
         .card-hover {
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
         }
+        /* Fade-in animation for sections */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            animation-name: fadeInUp;
+            animation-duration: 0.8s;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+        .animate-delay-6 { animation-delay: 0.6s; }
+        .animate-delay-7 { animation-delay: 0.7s; }
+        .animate-delay-8 { animation-delay: 0.8s; }
     </style>
 </head>
 <body class="antialiased">
-    
     <div class="w-full">
-        <!-- Modern Navbar -->
         <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-30 border-b border-gray-100 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
@@ -53,17 +75,16 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
         <header class="bg-gradient-to-b from-white to-gray-50">
             <div class="max-w-7xl mx-auto py-20 px-4 sm:py-28 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight fade-in animate-delay-1">
                     <span class="block">Create Stunning</span>
                     <span class="gradient-text">Photo Memories</span>
                 </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-500">
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-500 fade-in animate-delay-2">
                     Professional-quality photo strips with customizable layouts, filters and stickers - no app required.
                 </p>
-                <div class="mt-10 flex justify-center gap-4">
+                <div class="mt-10 flex justify-center gap-4 fade-in animate-delay-3">
                     <a href="app.html" class="bg-gradient-to-r from-pink-600 to-pink-500 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg">
                         Start Creating
                     </a>
@@ -71,23 +92,22 @@
                         Learn More
                     </a>
                 </div>
-                <div class="mt-16 max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Frameify example" class="w-full h-auto">
+                <div class="mt-16 max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gray-100 fade-in animate-delay-4">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=2500" alt="Frameify example" class="w-full h-auto">
                 </div>
             </div>
         </header>
 
-        <!-- Features Section -->
         <section id="features" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
+                <div class="text-center fade-in animate-delay-5">
                     <h2 class="text-3xl font-extrabold text-gray-900">Designed for Creativity</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
                         All the tools you need to create perfect photo strips
                     </p>
                 </div>
                 <div class="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover fade-in animate-delay-6">
                         <div class="flex-shrink-0 flex justify-center">
                             <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-50">
                                 <svg class="h-8 w-8 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -103,7 +123,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover fade-in animate-delay-7">
                         <div class="flex-shrink-0 flex justify-center">
                             <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-50">
                                 <svg class="h-8 w-8 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,7 +139,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover fade-in animate-delay-8">
                         <div class="flex-shrink-0 flex justify-center">
                             <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-50">
                                 <svg class="h-8 w-8 text-pink-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -138,22 +158,19 @@
             </div>
         </section>
 
-        <!-- How It Works Section -->
         <section id="how-it-works" class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
+                <div class="text-center fade-in animate-delay-1">
                     <h2 class="text-3xl font-extrabold text-gray-900">How It Works</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
                         Create your perfect photo strip in just a few simple steps
                     </p>
                 </div>
                 <div class="mt-16 space-y-16">
-                    <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex flex-col md:flex-row items-center gap-12 fade-in animate-delay-2">
                         <div class="md:w-1/2">
-                            <div class="bg-gradient-to-br from-pink-50 to-white p-1 rounded-2xl shadow-lg inline-block">
-                                <div class="bg-white p-4 rounded-xl">
-                                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="Step 1" class="rounded-lg w-full h-auto">
-                                </div>
+                            <div class="p-1 rounded-2xl shadow-lg border border-gray-100 bg-white">
+                                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=2500" alt="Step 1" class="rounded-xl w-full h-auto">
                             </div>
                         </div>
                         <div class="md:w-1/2">
@@ -165,12 +182,10 @@
                         </div>
                     </div>
                     
-                    <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12 fade-in animate-delay-3">
                         <div class="md:w-1/2">
-                            <div class="bg-gradient-to-br from-pink-50 to-white p-1 rounded-2xl shadow-lg inline-block">
-                                <div class="bg-white p-4 rounded-xl">
-                                    <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43" alt="Step 2" class="rounded-lg w-full h-auto">
-                                </div>
+                            <div class="p-1 rounded-2xl shadow-lg border border-gray-100 bg-white">
+                                <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=2500" alt="Step 2" class="rounded-xl w-full h-auto">
                             </div>
                         </div>
                         <div class="md:w-1/2">
@@ -182,12 +197,10 @@
                         </div>
                     </div>
                     
-                    <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex flex-col md:flex-row items-center gap-12 fade-in animate-delay-4">
                         <div class="md:w-1/2">
-                            <div class="bg-gradient-to-br from-pink-50 to-white p-1 rounded-2xl shadow-lg inline-block">
-                                <div class="bg-white p-4 rounded-xl">
-                                    <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda" alt="Step 3" class="rounded-lg w-full h-auto">
-                                </div>
+                            <div class="p-1 rounded-2xl shadow-lg border border-gray-100 bg-white">
+                                <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=2500" alt="Step 3" class="rounded-xl w-full h-auto">
                             </div>
                         </div>
                         <div class="md:w-1/2">
@@ -202,7 +215,6 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-pink-600 to-pink-500">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-extrabold text-white">
@@ -219,7 +231,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="bg-white border-t border-gray-100">
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
@@ -246,7 +257,7 @@
                         &copy; 2025 Frameify. All rights reserved.
                     </p>
                     <div class="mt-8 md:mt-0 flex space-x-6">
-                        <a href="#" class="text-base text-gray-400 hover:text-pink-600">Privacy Policy</a>
+                        <a href="privacy.html" class="text-base text-gray-400 hover:text-pink-600">Privacy Policy</a>
                         <a href="#" class="text-base text-gray-400 hover:text-pink-600">Terms of Service</a>
                         <a href="#" class="text-base text-gray-400 hover:text-pink-600">Contact Us</a>
                     </div>
@@ -254,6 +265,5 @@
             </div>
         </footer>
     </div>
-
 </body>
 </html>
